@@ -12,6 +12,7 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Make changes](#make-changes)**<br>
 - **[Group changes](#group-changes)**<br>
 - **[REFACTOR FILENAMES](#refactor-filenames)**<br>
+- **[SUPPRESS TRACKING](#supress-tracking)**<br>
 
 ## INSTALL GIT
 
@@ -173,3 +174,18 @@ Changes the file name and prepares it for commit.
 $ git mv [file-original] [file-renamed]
 ```
 
+## SUPPRESS TRACKING
+
+**Exclude temporary files and paths**
+
+Lists all ignored files in this project
+```
+$ git ls-files --other --ignored --exclude-standard
+```
+
+A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns
+```
+*.log
+build/
+temp-*
+```
