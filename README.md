@@ -16,6 +16,7 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Save Fragments](#save-fragments)**
 - **[Review History](#review-history)**
 - **[Redo Commits](#redo-commits)**
+- **[Synchronize Changes](#synchronize-changes)**
 
 ## INSTALL GIT
 
@@ -162,17 +163,17 @@ $ git branch -d [branch-name]
 
 **Relocate and remove versioned files**
 
-Deletes the file from the working directory and stages the deletion.
+Delete the file from the working directory and stages the deletion.
 ```bash
 $ git rm [file]
 ```
 
-Removes the file from version control but preserves the file locally.
+Remove the file from version control but preserves the file locally.
 ```
 $ git rm --cached [file]
 ```
 
-Changes the file name and prepares it for commit.
+Change the file name and prepares it for commit.
 ```
 $ git mv [file-original] [file-renamed]
 ```
@@ -181,7 +182,7 @@ $ git mv [file-original] [file-renamed]
 
 **Exclude temporary files and paths**
 
-Lists all ignored files in this project
+List all ignored files in this project
 ```
 $ git ls-files --other --ignored --exclude-standard
 ```
@@ -196,22 +197,22 @@ temp-*
 
 **Shelve and restore incomplete changes**
 
-Temporarily stores all modified tracked files
+Temporarily store all modified tracked files
 ```
 $ git stash
 ```
 
-Lists all stashed changesets
+List all stashed changesets
 ```
 $ git stash list
 ```
 
-Restores the most recently stashed files
+Restore the most recently stashed files
 ```
 $ git stash pop
 ```
 
-Discards the most recently stashed changeset
+Discard the most recently stashed changeset
 ```
 $ git stash drop
 ```
@@ -220,22 +221,22 @@ $ git stash drop
 
 **Browse and inspect the evolution of project files**
 
-Lists version history for the current branch
+List version history for the current branch
 ```
 $ git log
 ```
 
-Lists version history for a file, including renames
+List version history for a file, including renames
 ```
 $ git log --follow [file]
 ```
 
-Shows content differences between two branches
+Show content differences between two branches
 ```
 $ git diff [first-branch]...[second-branch]
 ```
 
-Outputs metadata and content changes of the specified commit
+Output metadata and content changes of the specified commit
 ```
 $ git show [commit]
 ```
@@ -244,13 +245,33 @@ $ git show [commit]
 
 **Erase mistakes and craf replacement history**
 
-Undoes all commits afer [commit], preserving changes locally
+Undo all commits afer [commit], preserving changes locally
 ```
 $ git reset [commit]
 ```
 
-Discards all history and changes back to the specified commit
+Discard all history and changes back to the specified commit
 ```
 $ git reset --hard [commit]
 ```
 
+## SYNCHRONIZE CHANGES
+
+**Register a repository bookmark and exchange version history**
+
+Download all history from the repository bookmark
+```
+$ git fetch [bookmark]
+```
+Combine bookmark’s branch into current local branch
+```
+$ git merge [bookmark]/[branch]
+```
+Upload all local branch commits to GitHub
+```
+$ git push [alias] [branch]
+```
+Download bookmark history and incorporates changes
+```
+$ git pull
+```
