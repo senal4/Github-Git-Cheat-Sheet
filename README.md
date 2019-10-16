@@ -5,15 +5,16 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 
 ### Catalog
 
-- **[Install Git](#install-git)**<br>
-- **[How to use Git](#how-to-use-git)**<br>
-- **[Configure tooling](#configure-tooling)**<br>
-- **[Create repositories](#create-repositories)**<br>
-- **[Make changes](#make-changes)**<br>
-- **[Group changes](#group-changes)**<br>
-- **[REFACTOR FILENAMES](#refactor-filenames)**<br>
-- **[SUPPRESS TRACKING](#suppress-tracking)**<br>
-- **[SAVE FRAGMENTS](#save-fragments)**<br>
+- **[Install Git](#install-git)**
+- **[How to use Git](#how-to-use-git)**
+- **[Configure tooling](#configure-tooling)**
+- **[Create repositories](#create-repositories)**
+- **[Make changes](#make-changes)**
+- **[Group changes](#group-changes)**
+- **[Refactor Filenames](#refactor-filenames)**
+- **[Suppress Tracking](#suppress-tracking)**
+- **[Save Fragments](#save-fragments)**
+- **[Review History](#review-history)**
 
 ## INSTALL GIT
 
@@ -209,4 +210,23 @@ $ git stash pop
 Discards the most recently stashed changeset
 ```
 $ git stash drop
+```
+## REVIEW HISTORY
+
+**Browse and inspect the evolution of project files**
+Lists version history for the current branch
+```
+$ git log
+```
+Lists version history for a file, including renames
+```
+$ git log --follow [file]
+```
+Shows content differences between two branches
+```
+$ git diff [first-branch]...[second-branch]
+```
+Outputs metadata and content changes of the specified commit
+```
+$ git show [commit]
 ```
