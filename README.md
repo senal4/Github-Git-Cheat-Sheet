@@ -15,6 +15,7 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Suppress Tracking](#suppress-tracking)**
 - **[Save Fragments](#save-fragments)**
 - **[Review History](#review-history)**
+- **[Redo Commits](#redo-commits)**
 
 ## INSTALL GIT
 
@@ -199,34 +200,57 @@ Temporarily stores all modified tracked files
 ```
 $ git stash
 ```
+
 Lists all stashed changesets
 ```
 $ git stash list
 ```
+
 Restores the most recently stashed files
 ```
 $ git stash pop
 ```
+
 Discards the most recently stashed changeset
 ```
 $ git stash drop
 ```
+
 ## REVIEW HISTORY
 
 **Browse and inspect the evolution of project files**
+
 Lists version history for the current branch
 ```
 $ git log
 ```
+
 Lists version history for a file, including renames
 ```
 $ git log --follow [file]
 ```
+
 Shows content differences between two branches
 ```
 $ git diff [first-branch]...[second-branch]
 ```
+
 Outputs metadata and content changes of the specified commit
 ```
 $ git show [commit]
 ```
+
+## REDO COMMITS
+
+**Erase mistakes and craf replacement history**
+
+Undoes all commits afer [commit], preserving changes locally
+```
+$ git reset [commit]
+```
+
+Discards all history and changes back to the specified commit
+```
+$ git reset --hard [commit]
+```
+
