@@ -12,7 +12,8 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Make changes](#make-changes)**<br>
 - **[Group changes](#group-changes)**<br>
 - **[REFACTOR FILENAMES](#refactor-filenames)**<br>
-- **[SUPPRESS TRACKING](#supress-tracking)**<br>
+- **[SUPPRESS TRACKING](#suppress-tracking)**<br>
+- **[SAVE FRAGMENTS](#save-fragments)**<br>
 
 ## INSTALL GIT
 
@@ -188,4 +189,24 @@ A text file named .gitignore suppresses accidental versioning of files and paths
 *.log
 build/
 temp-*
+```
+## SAVE FRAGMENTS
+
+**Shelve and restore incomplete changes**
+
+Temporarily stores all modified tracked files
+```
+$ git stash
+```
+Lists all stashed changesets
+```
+$ git stash list
+```
+Restores the most recently stashed files
+```
+$ git stash pop
+```
+Discards the most recently stashed changeset
+```
+$ git stash drop
 ```
