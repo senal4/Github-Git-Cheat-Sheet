@@ -11,7 +11,7 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Create repositories](#create-repositories)**<br>
 - **[Make changes](#make-changes)**<br>
 - **[Group changes](#group-changes)**<br>
-- **[REFACTOR FILENAMES](#refactor-filenames)**<br>
+- **[Refactor filenames](#refactor-filenames)**<br>
 
 ## INSTALL GIT
 
