@@ -11,6 +11,7 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Create repositories](#create-repositories)**<br>
 - **[Make changes](#make-changes)**<br>
 - **[Group changes](#group-changes)**<br>
+- **[REFACTOR FILENAMES](#refactor-filenames)**<br>
 
 ## INSTALL GIT
 
@@ -124,7 +125,7 @@ Record file snapshots permanently in version history
 $ git commit -m "[descriptive message]"
 ```
 
-### GROUP CHANGES
+## GROUP CHANGES
 
 **Name a series of commits and combine completed efforts**
 
@@ -152,3 +153,23 @@ Delete the specified branch
 ```bash
 $ git branch -d [branch-name]
 ```
+
+## REFACTOR FILENAMES
+
+**Relocate and remove versioned files**
+
+Deletes the file from the working directory and stages the deletion.
+```bash
+$ git rm [file]
+```
+
+Removes the file from version control but preserves the file locally.
+```
+$ git rm --cached [file]
+```
+
+Changes the file name and prepares it for commit.
+```
+$ git mv [file-original] [file-renamed]
+```
+
