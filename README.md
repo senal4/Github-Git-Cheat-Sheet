@@ -11,12 +11,12 @@ desktop. This cheat sheet will help you with commonly used Git command line inst
 - **[Create repositories](#create-repositories)**
 - **[Make changes](#make-changes)**
 - **[Group changes](#group-changes)**
-- **[Refactor Filenames](#refactor-filenames)**
-- **[Suppress Tracking](#suppress-tracking)**
-- **[Save Fragments](#save-fragments)**
-- **[Review History](#review-history)**
-- **[Redo Commits](#redo-commits)**
-- **[Synchronize Changes](#synchronize-changes)**
+- **[Refactor filenames](#refactor-filenames)**
+- **[Suppress tracking](#suppress-tracking)**
+- **[Save fragments](#save-fragments)**
+- **[Review history](#review-history)**
+- **[Redo commits](#redo-commits)**
+- **[Synchronize changes](#synchronize-changes)**
 
 ## INSTALL GIT
 
@@ -49,11 +49,6 @@ $ yum install git
 For Fedora 22 and later
  ```bash
 $ dnf install git
-```
-
-#### Gentoo
-```bash
-$ emerge --ask --verbose dev-vcs/git
 ```
 
 #### Arch Linux
@@ -163,17 +158,17 @@ $ git branch -d [branch-name]
 
 **Relocate and remove versioned files**
 
-Delete the file from the working directory and stages the deletion.
+Delete the file from the working directory and stages the deletion
 ```bash
 $ git rm [file]
 ```
 
-Remove the file from version control but preserves the file locally.
+Remove the file from version control but preserves the file locally
 ```
 $ git rm --cached [file]
 ```
 
-Change the file name and prepares it for commit.
+Change the file name and prepares it for commit
 ```
 $ git mv [file-original] [file-renamed]
 ```
@@ -193,6 +188,7 @@ A text file named .gitignore suppresses accidental versioning of files and paths
 build/
 temp-*
 ```
+
 ## SAVE FRAGMENTS
 
 **Shelve and restore incomplete changes**
